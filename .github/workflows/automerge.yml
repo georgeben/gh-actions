@@ -15,9 +15,10 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: 12
+      - name: Print out workdir
+        run: pwd
       - name: Install NPM dependencies
         run: npm install
-      - run: pwd
       - name: Run linters
         uses: samuelmeuli/lint-action@v1
         with:
